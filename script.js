@@ -1,0 +1,4 @@
+var calc= Number.parseFloat
+
+
+

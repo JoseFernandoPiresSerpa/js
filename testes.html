@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="stylr.css" media="all">
+    <link rel="script" href="script.js">
+    
+    <title>teste</title>
+    <style>
+        body{font:normal 20pt arial;}
+            #div{
+                display:flex; 
+                background-color: cadetblue;
+            width: 400px;
+        height: 400px;
+        border-radius: 20px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 30px;
+        padding: 40px;
+        
+
+        
+   }
+   #div2{
+    display:flex; 
+                background-color: cadetblue;
+            width: 400px;
+        height: 400px;
+        border-radius: 20px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 20px;
+        padding: 40px;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+        #div2 input{
+            border-radius:20px;
+            margin: 10px;
+        width: 90%;
+        padding: 15px;
+        background-color: rgb(32, 32, 32);
+        color: antiquewhite;
+        font:bold 13pt arial;
+        ;
+   }
+      
+    </style>
+</head>
+<body>
+
+    <div id="div" >
+teste-1
+
+    </div>
+    <div id="div2">
+        <P>Soma</P>
+        <input type="number" name="n1" id="n1"> <br> +
+        <br> 
+        <input type="number" name="n2" id="n2"> 
+        <input type="button" value="somar" onclick="somar()">
+<div id = "res">resultado</div>
+    </div>
+
+    
+   <script> 
+    var a =window.document.getElementById('div')
+    a.addEventListener('click', clicar)
+    a.addEventListener('mouseenter',entrar )
+    a.addEventListener('mouseout', sair)
+    
+    
+    function clicar(){
+     
+              var nome=window.prompt
+
+("qual o seu nome?")
+window.alert(`ola ${nome} seja bem vindo`)
+
+var sal=parseFloat(window.prompt("qual seu salário?").replace(",","."))
+var dolar = 5.40;
+var euro = 6.00;
+var emDolar = sal / dolar;
+var emEuro = sal / euro;
+var dol=emDolar.toLocaleString('en-US', {style:'currency',currency:'USD'})
+var salBR = sal.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})
+var eur =emEuro.toLocaleString('de-DE', {style:'currency', currency:'EUR'})
+a.innerHTML=`seu nome tem ${nome.length} letras. ${nome.toUpperCase()} seu salário em reais é ${salBR}, ${dol} em dólar, e ${eur} em euro. ` 
+a.style.background=
+'blue'
+a.style.fontFamily= 'impact'
+
+    }
+    function entrar(){a.style.background = 'red'
+a.innerText='mouse dentro'}
+    function sair(){a.style.background = 'cadetblue'
+a.innerText='mouse fora'}
+</script>
+</body>
+
+</html>
